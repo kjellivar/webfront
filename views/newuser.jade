@@ -1,0 +1,6 @@
+extends layout
+block content
+    h1= title
+    form(name="adduser",method="post",action="/adduser")
+        input#inputUserName(type="text",placeholder="username",name="username")
+        button(type="submit") submit
