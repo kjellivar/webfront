@@ -1,0 +1,19 @@
+extends layout
+block content
+    h1= title
+    p Welcome to you
+
+    div#nickWrap
+        p Enter a username:
+        p#nickError
+        form#setNick
+            input#nickname(type="text", name="user")
+            input(type="submit")
+
+    div#contentWrap
+        div#chatWrap
+            ul#chat
+            form#send-message
+                input#message(size="35")
+                input(type="submit")
+        ul#users

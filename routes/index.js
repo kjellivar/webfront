@@ -7,12 +7,8 @@ exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
 
-exports.helloworld = function(req, res){
-    res.render('helloworld', { title: 'Your mama' });
-};
-
-exports.newuser = function(req, res){
-    res.render('newuser', { title: 'Add new user' });
+exports.chat = function(req, res){
+    res.render('chat', { title: 'This is chatting mofo' });
 };
 
 exports.userlist = function(db) {

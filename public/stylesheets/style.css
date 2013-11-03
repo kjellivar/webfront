@@ -2,6 +2,32 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-a {
-  color: #999;
+#chat {
+  height: 500px;
+  width: 500px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+#contentWrap {
+  display: none;
+}
+#chatWrap {
+  float: left;
+  border: 1px #000 solid;
+}
+.error {
+  color: red;
+}
+.msg {
+  padding: 5px;
+  border-bottom: 1px solid #DBDBDB;
+}
+.msg:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+ul#users {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
