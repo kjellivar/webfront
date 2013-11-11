@@ -1,10 +1,17 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='http://code.jquery.com/jquery-latest.min.js')
-    script(src='/socket.io/socket.io.js')
-    script(src='/js/chat.js')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/lib/normalize.css', type="text/css")
+		link(rel='stylesheet', href='/stylesheets/style.css', type="text/css")
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Varela+Round', type="text/css")
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans', type="text/css")
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600', type="text/css")
+		link(rel='stylesheet', href='/lib/font-awesome-4.0.3/css/font-awesome.min.css', type="text/css")
+		link(rel='stylesheet', href='/lib/nanoScroller/nanoScroller.css', type="text/css")
+		script(src='/lib/jquery/jquery-2.0.3.min.js')
+		script(src='/socket.io/socket.io.js')
+		script(src='/js/chat.js')
+		script(src='/lib/nanoScroller/nanoScroller.js')
+	body
+		block content

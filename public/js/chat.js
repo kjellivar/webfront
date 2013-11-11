@@ -1,4 +1,33 @@
 $(function(){
+	var $msgBoxContainer = $("#messageBoxContainer");
+	var $chatContainer = $("#chat");
+	var scrollChatContainer = $(".nano");
+	/* Scroller */
+
+	activateScroll();
+	function activateScroll() {
+		var toTop = $chatContainer.offset().top;
+		var msgBox = $msgBoxContainer.height();
+		var windowSize = $(window).height();
+		var xtraPadding = 51; //#chat top padding
+		var totalHeight = windowSize - msgBox - toTop - xtraPadding;
+		scrollChatContainer.height(totalHeight);
+		scrollChatContainer.nanoScroller();
+		scrollToBottom();
+	}
+
+	function scrollToBottom() {
+		$(".nano").nanoScroller({scroll : "bottom"});
+		setTimeout(function() {
+			$(".nano").nanoScroller({scroll : "bottom"});
+		}, 80);
+	}
+
+	$( window ).resize(function() {
+		activateScroll();
+	});
+
+	/* CHAT FUNCTIONS */
     var socket = io.connect();
     var $nickForm = $('#setNick');
     var $nickError = $('#nickError');
@@ -29,12 +58,16 @@ $(function(){
         $users.html(html);
     });
 
-    $messageForm.submit(function(e){
-        e.preventDefault();
-        socket.emit('send message', $messageBox.val(), function(data){
-            $chat.append('<span class="error">' + data + "</span><br/>");
-        });
-        $messageBox.val('');
+    $("textarea#message").keypress(function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            if($messageBox.val() != '' ) {
+                socket.emit('send message', $messageBox.val(), function(data){
+                    $chat.append('<li class="error">' + data + "</li>");
+                });
+                $messageBox.val('');
+            }
+        }
     });
 
     socket.on('load old msgs', function(docs){

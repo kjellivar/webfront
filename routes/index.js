@@ -4,13 +4,14 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Webfront' });
 };
 
 exports.chat = function(req, res){
     res.render('chat', { title: 'This is chatting mofo' });
 };
 
+/*
 exports.userlist = function(db) {
     return function(req, res) {
         var collection = db.get('hei');
@@ -21,7 +22,8 @@ exports.userlist = function(db) {
         });
     };
 };
-
+*/
+/*
 exports.adduser = function(db) {
     return function(req, res) {
 
@@ -49,3 +51,4 @@ exports.adduser = function(db) {
 
     }
 }
+*/

@@ -1,19 +1,17 @@
 extends layout
 block content
     h1= title
-    p Welcome to you
 
     div#nickWrap
         p Enter a username:
         p#nickError
         form#setNick
-            input#nickname(type="text", name="user")
-            input(type="submit")
+            input#nickname(type="text", name="user", class="form-control", style="width:200px;")
+            input(type="submit", class="btn")
 
     div#contentWrap
         div#chatWrap
             ul#chat
             form#send-message
-                input#message(size="35")
-                input(type="submit")
+                textarea#message(rows="3", placeholder="Type your msg...")
         ul#users
