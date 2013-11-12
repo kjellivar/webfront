@@ -110,11 +110,10 @@ section#main #pageHeader #userinfo span {
   padding: 0px 7px 0px 10px;
 }
 section#main #chat {
-  padding: 20px 20px 0px 20px;
+  padding: 0px 20px;
 }
 section#main #chat #messageBoxContainer {
   width: 100%;
-  margin-top: 10px;
   margin-left: -20px;
   padding: 10px 20px;
   border-top: 1px solid #CCC;
@@ -144,6 +143,9 @@ section#main #chat .nano ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
+}
+section#main #chat .nano ul li:first-child {
+  border-top: none;
 }
 section#main #chat .nano ul li {
   padding: 10px 0px;

@@ -9,10 +9,10 @@ $(function(){
 		var toTop = $chatContainer.offset().top;
 		var msgBox = $msgBoxContainer.height();
 		var windowSize = $(window).height();
-		var xtraPadding = 51; //#chat top padding
+		var xtraPadding = 21; //#chat top padding
 		var totalHeight = windowSize - msgBox - toTop - xtraPadding;
 		scrollChatContainer.height(totalHeight);
-		scrollChatContainer.nanoScroller();
+		scrollChatContainer.nanoScroller({flash: true});
 		scrollToBottom();
 	}
 
