@@ -101,7 +101,15 @@
 		 @default null
 		 */
 
-		windowContext: null
+		windowContext: null,
+		/**
+		 an alternate window context.
+		 @property windowContext
+		 @type Window
+		 @default null
+		 */
+
+		animationTime: null
 	};
 	/**
 	 @property SCROLLBAR
@@ -464,7 +472,6 @@
 				},
 				drag: function(e) {
 					_this.sliderY = e.pageY - _this.$el.offset().top - _this.offsetY - 20; // kompansere for padding
-					console.log(_this.$el);
 					_this.scroll();
 					_this.updateScrollValues();
 					if (_this.contentScrollTop >= _this.maxScrollTop && _this.prevScrollTop !== _this.maxScrollTop) {
@@ -724,12 +731,18 @@
 		 */
 
 
-		NanoScroll.prototype.scrollBottom = function(offsetY) {
+		NanoScroll.prototype.scrollBottom = function(offsetY, animationTime) {
 			if (!this.isActive) {
 				return;
 			}
 			this.reset();
-			this.$content.scrollTop(this.contentHeight - this.$content.height() - offsetY).trigger(MOUSEWHEEL);
+			if(animationTime != null) {
+				this.$content.animate({
+					scrollTop: this.contentHeight - this.$content.height() - offsetY
+				}, animationTime).trigger(MOUSEWHEEL);
+			} else {
+				this.$content.scrollTop(this.contentHeight - this.$content.height() - offsetY).trigger(MOUSEWHEEL);
+			}
 			return this;
 		};
 
@@ -870,7 +883,7 @@
 					return scrollbar.scrollTo(settings.scrollTo);
 				}
 				if (settings.scroll === 'bottom') {
-					return scrollbar.scrollBottom(0);
+					return scrollbar.scrollBottom(0, settings.animationTime);
 				}
 				if (settings.scroll === 'top') {
 					return scrollbar.scrollTop(0);
