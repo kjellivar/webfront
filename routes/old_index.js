@@ -1,17 +1,9 @@
 
 /*
- * GET home page.
- */
-
-exports.index = function(req, res){
-  res.render('index', { title: 'Webfront' });
-};
-
 exports.chat = function(req, res){
     res.render('chat', { title: 'This is chatting mofo' });
 };
 
-/*
 exports.userlist = function(db) {
     return function(req, res) {
         var collection = db.get('hei');

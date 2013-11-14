@@ -20,19 +20,6 @@
   padding: 5px;
   border-bottom: 1px solid #DBDBDB;
 }
-textarea#message {
-  display: block;
-  width: 494px;
-  font-size: 16px;
-  font-family: sans-serif;
-  margin: 0px;
-  padding: 7px 5px;
-  outline: none;
-  border: 1px solid #ddd;
-}
-textarea#message:focus {
-  background-color: #FCFCFC;
-}
 .msg:nth-child(odd) {
   background-color: #f7f7f7;
 }
@@ -40,9 +27,6 @@ ul#users {
   list-style: none;
   margin: 0px;
   padding: 0px;
-  li {
-
-  }
 }
 */
 
@@ -220,5 +204,10 @@ section#main {
 @media (max-width: 500px) {
 	.chatPicture {
 	  display: none;
+	}
+  	#userinfo {
+	  span, i {
+		display: none !important;
+	  }
 	}
 }

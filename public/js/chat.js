@@ -36,8 +36,8 @@ $(function(){
 	});
 
 	// MessageTest
-	var msgTest = '<li><div class="chatPicture"><a href="#" class="shadow"><img src="/img/profile_pictures/ragne.png" width="60px" height="60px"></a></div><div class="chatPost"><span class="chatName">Ragne Henriksen</span><span class="chatTimestamp"> -  Today at 11:23</span><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div></li>';
-	var msgTest2 = '<li><div class="chatPicture"><a href="#" class="shadow"><img src="/img/profile_pictures/andreas.png" width="60px" height="60px"></a></div><div class="chatPost"><span class="chatName">Andreas Ludvigsen</span><span class="chatTimestamp"> -  Today at 11:20</span><p>' +
+	var msgTest = '<li><div class="chatPicture"><a href="#" class="shadow"><img src="/img/profile_pictures/ragne.png" width="60px" height="60px"></a></div><div class="chatPost"><span class="chatName">Ragne Henriksen</span><span class="chatTimestamp"> -  few seconds ago</span><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div></li>';
+	var msgTest2 = '<li><div class="chatPicture"><a href="#" class="shadow"><img src="/img/profile_pictures/andreas.png" width="60px" height="60px"></a></div><div class="chatPost"><span class="chatName">Andreas Ludvigsen</span><span class="chatTimestamp"> -  few seconds ago</span><p>' +
 	'Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p></div></li>';
 	var count = 1;
 	$("#userinfo").click(function() {
