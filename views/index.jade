@@ -1,6 +1,8 @@
-extends layout
+extends includes/framework
 block content
-	if user
-		h3 Hi, #{user.name}
-	else
-		h3 Hi, stranger
+    section#main
+        if user
+            h3 Hi, #{user.name}
+        else
+            h3 Hi, stranger
+            a(href="#") Take me to login
